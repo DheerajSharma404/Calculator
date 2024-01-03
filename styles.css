@@ -1,0 +1,111 @@
+:root {
+  --body-background: #3b4664;
+  --input-background: #181f32;
+  --keypad-background: #252d44;
+  --key-orange: #d13f30;
+  --key-orahge-hover: #e76e55;
+  --key-grey: #647299;
+  --key-grey-hover: #7c8da9;
+  --key-offwhite: #eae3db;
+  --key-offwhite-hover: #ffffff;
+  --text-white: #fff;
+  --text-black: #000;
+  --text-primary: 2rem;
+  --text-secondary: 1.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--body-background);
+  font-family: Inter, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--text-primary);
+  font-weight: 700;
+  color: var(--text-white);
+  background-color: var(--input-background);
+  text-align: right;
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  max-width: 380px;
+  padding: 1em;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.calculator-body {
+  width: 100%;
+}
+.calc-text {
+  color: var(--text-white);
+  font-size: var(--text-primary);
+  font-weight: 700;
+}
+.input-div {
+  background-color: var(--input-background);
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+.keypad-div {
+  background-color: var(--keypad-background);
+  border-radius: 12px;
+  padding: 1em;
+}
+.rows {
+  display: flex;
+}
+.keys {
+  background-color: var(--key-offwhite);
+  font-size: var(--text-secondary);
+  font-weight: 700;
+  color: var(--text-black);
+  padding: 0.5em 0.2em;
+  margin: 0.2em;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+.keys:hover,
+.keys:focus {
+  background-color: var(--key-offwhite-hover);
+}
+.text-keys {
+  background-color: var(--key-grey);
+  color: var(--text-white);
+}
+.text-keys:hover,
+.text-keys:focus {
+  background-color: var(--key-grey-hover);
+  color: var(--text-white);
+}
+.symbol-keys {
+  background-color: var(--key-orange);
+  color: var(--text-white);
+}
+.symbol-keys:hover,
+.symbol-keys:focus {
+  background-color: var(--key-orahge-hover);
+  color: var(--text-white);
+}
